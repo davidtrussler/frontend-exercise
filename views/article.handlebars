@@ -1,0 +1,25 @@
+<article>
+	<img src="{{ article.post.image }}" alt="" style="width:100%;"/>
+
+	<h1>{{ article.post.title }}</h1>
+
+	<p>{{ article.post.standfirst }}</p>
+
+	<time>{{ article.post.date }}</time>
+
+	{{{ article.post.body }}}
+</article>
+
+<article>
+	<h1>More stories</h1>
+
+	<ul>
+		{{#each posts.posts}}
+			<li>
+				<img src="{{this.thumbnail}}" alt=""/>
+				<h2>{{this.title}}</h2>
+				<a href="#">Read more <span class="visually-hidden">about {{this.title}}</span></a>
+			</li>
+		{{/each}}
+	</ul>
+</article>
