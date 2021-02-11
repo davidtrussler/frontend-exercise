@@ -1,4 +1,5 @@
 const express = require('express');
+const article = require('./content/article.json'); 
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -8,11 +9,10 @@ router.get('/', (req, res) => {
 });
 
 router.get(/\/article\//, (req, res) => {
-	let articleName = req.url.split('/')[2]; 
+	let articleName = req.url.split('/')[2]; // this isn't used at the minute
+	let data = {article: article};
 
-	console.log('articleName: ', articleName); 
-
-	res.render('article'); 
+	res.render('article', data); 
 });
 
 module.exports = router;
