@@ -1,1 +1,9 @@
-<h1>An Article Page</h1>
+<img src="{{ article.post.image }}" alt="" style="width:100%;"/>
+
+<h1>{{ article.post.title }}</h1>
+
+<p>{{ article.post.standfirst }}</p>
+
+<time>{{ article.post.date }}</time>
+
+{{{ article.post.body }}}
