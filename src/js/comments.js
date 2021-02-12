@@ -3,24 +3,7 @@
  */
 class Comments {
 	constructor() {
-		// let _this = this; 
-		// this.params = Object.assign({
-		// 	homePagePath: '/'
-		// }, params);
 	}
-
-	/**	
-	 * Adds the comments to the DOM
-	 */
-	// addComments() {
-	// 	let _this = this; 
-
-	// 	return new Promise((resolve, reject) => {
-	// 		_this.getComments().then(comments => {
-	// 			console.log('comments: ', comments); 
-	// 		}) 
-	// 	})
-	// }
 
 	/**
 	 * get all the comments from 
@@ -35,9 +18,31 @@ class Comments {
 			}
 
 			return response.json();
-		}).then(function(data) {
-			console.log('data: ', data);
-			// return data; 
+		}).then(function(comments) {
+			let section = document.createElement('section');
+			let heading = document.createElement('h1');
+			let list = document.createElement('ul');
+			let associatedArticles = document.querySelector('[data-section="associatedArticles"]');
+
+			heading.textContent = `${comments.length} comments`; 
+
+			for (let comment of comments) {
+				let listItem = document.createElement('li'); 
+				let html = `
+					<h2>${comment.name}</h2>
+					<time>${comment.date}</time>
+					<span>${comment.likes} likes</span>
+					<p>${comment.body}</p>
+				`; 
+
+				listItem.innerHTML = html; 
+				list.appendChild(listItem); 
+			}
+
+			section.dataset.section = 'comments'; 
+			section.appendChild(heading);
+			section.appendChild(list); 
+			associatedArticles.parentNode.insertBefore(section, associatedArticles); 
 		}); 
 	}
 }
