@@ -1,0 +1,10 @@
+.article {}
+
+.article__image--hero {
+	width: calc(100% + (var(--gutter) * 2));
+	margin: 0 calc(var(--gutter) * -1);
+}
+
+.article__image--hero img {
+	width: 100%; 
+}

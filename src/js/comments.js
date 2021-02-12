@@ -38,19 +38,24 @@ class Comments {
 			for (let comment of comments) {
 				let listItem = document.createElement('li'); 
 				let html = `
-					<h2>${comment.name}</h2>
-					<time>${comment.date}</time>
-					<span>${comment.likes} likes</span>
-					<p>${comment.body}</p>
+					<p class="comments__item__header">${comment.name}</p>
+					<time class="comments__item__date">${comment.date}</time>
+					<span class="comments__item__likes">${comment.likes} likes</span>
+					<p class="comments__item__body">${comment.body}</p>
 				`; 
 
-				listItem.innerHTML = html; 
+				listItem.className = 'comments__item'; 
+				listItem.innerHTML = html;
 				list_comments.appendChild(listItem); 
 			}
 
 			sortHead.textContent = 'Sort';
 			heading.textContent = `${comments.length} comments`;
+			heading.className = 'comments__heading'; 
 			section.dataset.section = 'comments';
+			section.className = 'comments'; 
+			sort.className = 'comments__sort'; 
+			header.className = 'comments__header'; 
 			sort.appendChild(sortHead);
 			sort.appendChild(list_sort);
 			section.appendChild(heading);
