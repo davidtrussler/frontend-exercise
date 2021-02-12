@@ -19,12 +19,24 @@ class Comments {
 
 			return response.json();
 		}).then(function(comments) {
-			let section = document.createElement('section');
-			let heading = document.createElement('h1');
-			let list = document.createElement('ul');
-			let associatedArticles = document.querySelector('[data-section="associatedArticles"]');
+			let section = document.createElement('section'),
+					heading = document.createElement('h1'),
+					list_comments = document.createElement('ul'),
+					list_sort = document.createElement('ul'),
+					sort = document.createElement('div'),
+					sortHead = document.createElement('h3'),
+					sortItems = ['likes', 'newest'],
+					associatedArticles = document.querySelector('[data-section="associatedArticles"]');
 
-			heading.textContent = `${comments.length} comments`; 
+			for (let sortItem of sortItems) {
+				let listItem = document.createElement('li'); 
+				let anchor = document.createElement('a'); 
+
+				anchor.href = sortItem; 
+				anchor.textContent = sortItem; 
+				listItem.appendChild(anchor);
+				list_sort.appendChild(listItem); 
+			}
 
 			for (let comment of comments) {
 				let listItem = document.createElement('li'); 
@@ -36,12 +48,17 @@ class Comments {
 				`; 
 
 				listItem.innerHTML = html; 
-				list.appendChild(listItem); 
+				list_comments.appendChild(listItem); 
 			}
 
-			section.dataset.section = 'comments'; 
+			sortHead.textContent = 'Sort';
+			heading.textContent = `${comments.length} comments`;
+			section.dataset.section = 'comments';
+			sort.appendChild(sortHead);
+			sort.appendChild(list_sort);
 			section.appendChild(heading);
-			section.appendChild(list); 
+			section.appendChild(sort);
+			section.appendChild(list_comments);
 			associatedArticles.parentNode.insertBefore(section, associatedArticles); 
 		}); 
 	}
