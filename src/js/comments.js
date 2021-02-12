@@ -2,9 +2,6 @@
  * Comments class
  */
 class Comments {
-	constructor() {
-	}
-
 	/**
 	 * get all the comments from 
 	 * https://my-json-server.typicode.com/telegraph/frontend-exercise/comments
