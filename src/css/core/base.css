@@ -1,4 +1,41 @@
-header, main {
+body > header, 
+body > main {
 	width: calc(100% - (var(--gutter) * 2));
 	margin: 0 var(--gutter);
+}
+
+p {
+	--font-size: 1.125rem; 
+	--line-height: 1.4; 
+
+	font-family: Georgia, Times, serif; 
+	font-size: var(--font-size); 
+	line-height: var(--line-height); 
+	margin: 0 0 calc(var(--font-size) * var(--line-height));
+}
+
+a {
+	color: var(--link-colour);
+	text-decoration: underline; 
+}
+
+a:hover {
+	text-decoration: none;	
+}
+
+a:focus {
+	color: var(--colour-white);
+	background: var(--focus-colour); 
+	outline: var(--focus-colour);
+}
+
+img {
+	display: block;
+}
+
+.visually-hidden {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	clip: rect(0 0 0 0);
 }
