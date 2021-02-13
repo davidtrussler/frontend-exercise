@@ -16,12 +16,13 @@ class Comments {
 
 			return response.json();
 		}).then(function(comments) {
-			let section = document.createElement('section'),
+			let section = document.createElement('div'),
+					header = document.createElement('header'), 
 					heading = document.createElement('h1'),
 					list_comments = document.createElement('ul'),
 					list_sort = document.createElement('ul'),
 					sort = document.createElement('div'),
-					sortHead = document.createElement('h3'),
+					sortHead = document.createElement('p'),
 					sortItems = ['likes', 'newest'],
 					associatedArticles = document.querySelector('[data-section="associatedArticles"]');
 
@@ -58,8 +59,9 @@ class Comments {
 			header.className = 'comments__header'; 
 			sort.appendChild(sortHead);
 			sort.appendChild(list_sort);
-			section.appendChild(heading);
-			section.appendChild(sort);
+			header.appendChild(heading);
+			header.appendChild(sort);
+			section.appendChild(header);
 			section.appendChild(list_comments);
 			associatedArticles.parentNode.insertBefore(section, associatedArticles); 
 		}); 

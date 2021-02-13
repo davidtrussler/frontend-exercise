@@ -1,16 +1,18 @@
-<section class="article" data-section="article">
-	<div class="article__image--hero">
-		<img src="{{ article.post.image }}" alt=""/>
-	</div>
+<article class="article" data-section="article">
+	<header>
+		<div class="article__image--hero">
+			<img src="{{ article.post.image }}" alt=""/>
+		</div>
 
-	<h1>{{ article.post.title }}</h1>
+		<h1>{{ article.post.title }}</h1>
 
-	<p>{{ article.post.standfirst }}</p>
+		<p>{{ article.post.standfirst }}</p>
 
-	<time>{{ article.post.date }}</time>
+		<time>{{ article.post.date }}</time>
+	</header>
 
 	{{{ article.post.body }}}
-</section>
+</article>
 
 <aside class="associated" data-section="associatedArticles">
 	<h1>More stories</h1>
@@ -19,9 +21,9 @@
 		{{#each posts.posts}}
 			<li>
 				<img src="{{this.thumbnail}}" alt=""/>
-				<h2>{{this.title}}</h2>
+				<p>{{this.title}}</p>
 				<a href="#">Read more <span class="visually-hidden">about {{this.title}}</span></a>
 			</li>
 		{{/each}}
 	</ul>
-</section>
+</aside>
