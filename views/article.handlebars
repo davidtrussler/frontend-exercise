@@ -4,11 +4,11 @@
 			<img src="{{ article.post.image }}" alt=""/>
 		</div>
 
-		<h1>{{ article.post.title }}</h1>
+		<h1 class="article__heading">{{ article.post.title }}</h1>
 
-		<p>{{ article.post.standfirst }}</p>
+		<p class="article__standfirst">{{ article.post.standfirst }}</p>
 
-		<time>{{ article.post.date }}</time>
+		<time class="article__date">{{ article.post.date }}</time>
 	</header>
 
 	{{{ article.post.body }}}
