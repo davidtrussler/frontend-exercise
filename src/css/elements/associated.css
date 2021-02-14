@@ -1,2 +1,40 @@
 .associated {}
 
+.associated__header {
+	padding: 1.3rem 0;
+	margin: 0 0 1rem; 
+	border-top: solid 1px; 
+	border-bottom: solid 1px; 
+}
+
+.associated__heading {
+	font-size: 1.375rem;
+	font-weight: bold;
+}
+
+.associated__item {
+	--image-size: 65px; 
+
+	margin: 0 0 1rem;
+	padding: 0 0 1rem; 
+	border-bottom: solid 1px; 
+}
+
+.associated__image {
+	float: left;
+	width: var(--image-size); 
+	height: var(--image-size);
+	margin: 0.4rem 0 0;
+}
+
+.associated__image img {
+	width: 100%;
+}
+
+.associated__content {
+	padding: 0 0 0 calc(var(--image-size) + 1rem);
+}
+
+.associated__content p {
+	font-weight: bold; 
+}

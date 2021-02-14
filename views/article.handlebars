@@ -15,14 +15,21 @@
 </article>
 
 <aside class="associated" data-section="associatedArticles">
-	<h1>More stories</h1>
+	<header class="associated__header">
+		<h1 class="associated__heading">More stories</h1>
+	</header>
 
 	<ul>
 		{{#each posts.posts}}
-			<li>
-				<img src="{{this.thumbnail}}" alt=""/>
-				<p>{{this.title}}</p>
-				<a href="#">Read more <span class="visually-hidden">about {{this.title}}</span></a>
+			<li class="associated__item">
+				<div class="associated__image">
+					<img src="{{this.thumbnail}}" alt=""/>
+				</div>
+
+				<div class="associated__content">
+					<p>{{this.title}}</p>
+					<a href="#">Read more <span class="visually-hidden">about {{this.title}}</span></a>
+				</div>
 			</li>
 		{{/each}}
 	</ul>
