@@ -48,4 +48,4 @@ Articles are served from a URL in the form [http://localhost:3000/article/name-o
 
 | Design: large device + grid | Design: large device | Design: small devices |
 | --- | --- | --- |
-| ![design-large-device-grid](designs/design-large-device-grid.png) | ![design-large-device](designs/design-large-device.jpg) | ![design-small-devices](designs/design-small-devices.jpg) |
+| ![design-large-device-grid](designs/design-large-device-grid.png) | ![design-large-device](designs/design-large-devices.png) | ![design-small-devices](designs/design-small-devices.png) |
