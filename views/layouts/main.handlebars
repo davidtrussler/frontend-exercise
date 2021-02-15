@@ -6,7 +6,12 @@
 		<script src="static/app.bundle.js" defer></script>
 	</head>
 	<body>
-		{{> header }}
-		{{{ body }}}
+		<header>
+			{{> header }}
+		</header>
+
+		<main>
+			{{{ body }}}
+		</main>
 	</body>
 </html>

@@ -1,0 +1,10 @@
+:root {
+	--gutter: 2.5%; 
+	
+	--link-colour: #5c0000;
+	--focus-colour: #5c0000;
+	--colour-white: #fff;
+
+	--font-serif: Georgia, Times, serif;
+	--font-sans-serif: Arial, sans-serif;
+}
