@@ -1,6 +1,14 @@
 # Responsive News Article
 
-This is a simple app to serve an article from a JSON file. 
+This is an app designed to create a responsive news article to match supplied designs.
+
+It runs on an [express](https://expressjs.com/) server and uses 
+- [webpack](https://webpack.js.org/) for JavaScript compilation
+- [PostCSS](https://postcss.org/) for CSS concatenation
+- [handlebars](https://handlebarsjs.com/guide/) for templating
+- [Jest](https://jestjs.io/) for unit testing
+
+The article and related posts are implemented server-side and comments are implemented client-side and injected with JavaScript once the DOM is ready. 
 
 ## Prerequisites
 
