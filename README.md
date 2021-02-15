@@ -19,3 +19,19 @@ This is a simple app to serve an article from a JSON file.
 ## Reading articles
 
 Articles are served from a URL in the form [http://localhost:3000/article/name-of-the-article](http://localhost:3000/article/name-of-the-article)
+
+## TODO
+
+- [ ] Parse timestamps into human readable form and utilise semantic parts of the `<time>` element
+- [ ] Add the meta data attributes
+- [ ] Improve routing so that the same article is not always fetched regardless of URL
+- [ ] Mock the fetch method in Jest to test that articles are being dealt with correctly when received
+- [ ] Add full suite of tests for comments
+- [ ] Tidy up variable use of createElement and back-tick string creation
+- [ ] Deal with the width of the hero image better
+- [ ] Add `<title>` element to `<head>`
+- [ ] Add styles for responsiveness on larger viewports
+- [ ] Add sort functionality
+- [ ] Review/improve colour contrasts for A11Y
+- [ ] Review/improve keyboard access for tabbing/focus styles etc.
+- [ ] Review/improve screen reader semantics including addition of aria values
