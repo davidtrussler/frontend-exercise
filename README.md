@@ -1,6 +1,14 @@
 # Responsive News Article
 
-This is a simple app to serve an article from a JSON file. 
+This is an app designed to create a responsive news article to match supplied designs.
+
+It runs on an [express](https://expressjs.com/) server and uses 
+- [webpack](https://webpack.js.org/) for JavaScript compilation
+- [PostCSS](https://postcss.org/) for CSS concatenation
+- [handlebars](https://handlebarsjs.com/guide/) for templating
+- [Jest](https://jestjs.io/) for unit testing
+
+The article and related posts are implemented server-side and comments are implemented client-side and injected with JavaScript once the DOM is ready. 
 
 ## Prerequisites
 
@@ -35,3 +43,9 @@ Articles are served from a URL in the form [http://localhost:3000/article/name-o
 - [ ] Review/improve colour contrasts for A11Y
 - [ ] Review/improve keyboard access for tabbing/focus styles etc.
 - [ ] Review/improve screen reader semantics including addition of aria values
+
+## Designs
+
+| Design: large device + grid | Design: large device | Design: small devices |
+| --- | --- | --- |
+| ![design-large-device-grid](designs/design-large-device-grid.png) | ![design-large-device](designs/design-large-devices.png) | ![design-small-devices](designs/design-small-devices.png) |
